@@ -1,103 +1,98 @@
-## Step 1: Preparing to make your extension
+## Passo 1: Preparando-se para criar sua extensão
 
-Welcome to **"Your first extension for GitHub Copilot"** exercise! :robot:
+Bem-vindo ao exercício **"Sua primeira extensão para o GitHub Copilot"**! :robot:
 
-We will be making an extension for GitHub Copilot by creating a web service, connecting to a GitHub App, and customizing it to our needs (the staff of a high school). But before we get started, let's learn a bit more about extensions.
+Vamos criar uma extensão para o GitHub Copilot desenvolvendo um serviço web, conectando-o a um GitHub App e personalizando-o para nossas necessidades (a equipe de uma escola de ensino médio). Mas antes de começarmos, vamos aprender um pouco mais sobre extensões.
 
-### What is a GitHub Copilot Extension?
+### O que é uma Extensão do GitHub Copilot?
 
-A [GitHub Copilot Extension](https://github.com/features/copilot/extensions) is an add-on that provides customized abilities for GitHub Chat and github.com. That means, it can be more dynamic and include consistent context.
+Uma [Extensão do GitHub Copilot](https://github.com/features/copilot/extensions) é um complemento que fornece habilidades personalizadas para o GitHub Chat e o github.com. Isso significa que ela pode ser mais dinâmica e incluir contexto consistente.
 
-For example:
+Por exemplo:
 
-- **Querying documentation**: A Copilot Extension can allow Copilot Chat to query a third-party documentation service to find information about a specific topic.
-- **AI-assisted coding**: A Copilot Extension can use a third-party AI model to provide code suggestions.
-- **Data retrieval**: A Copilot Extension can allow Copilot Chat to query a third-party data service to retrieve information about a specific topic.
-- **Action execution**: A Copilot Extension can allow Copilot Chat to execute a specific action, such as posting to a message board or updating a tracking item in an external system.
+- **Consultar documentação**: Uma Extensão do Copilot pode permitir que o Copilot Chat consulte um serviço de documentação de terceiros para encontrar informações sobre um tópico específico.
+- **Codificação assistida por IA**: Uma Extensão do Copilot pode usar um modelo de IA de terceiros para fornecer sugestões de código.
+- **Recuperação de dados**: Uma Extensão do Copilot pode permitir que o Copilot Chat consulte um serviço de dados de terceiros para recuperar informações sobre um tópico específico.
+- **Execução de ações**: Uma Extensão do Copilot pode permitir que o Copilot Chat execute uma ação específica, como postar em um quadro de mensagens ou atualizar um item de acompanhamento em um sistema externo.
 
-In fact, you can even publish your extension on the [GitHub Marketplace](https://github.com/marketplace?type=apps&copilot_app=true) to share it with the world!
+Na verdade, você pode até publicar sua extensão no [GitHub Marketplace](https://github.com/marketplace?type=apps&copilot_app=true) para compartilhá-la com o mundo!
 
-> Ref: For more information, see the [About building extensions](https://docs.github.com/en/copilot/building-copilot-extensions/about-building-copilot-extensions) page.
+> Ref: Para mais informações, veja a página [Sobre a criação de extensões](https://docs.github.com/pt/copilot/building-copilot-extensions/about-building-copilot-extensions).
 
-### How do I make an extension?
+### Como faço uma extensão?
 
-Creating an extension is fairly easy. It includes 3 parts, which we will learn in this lesson.
-Naturally, the web service must be hosted, but that is covered in another lesson. For this exercise, we will use a [Codespace](https://github.com/features/codespaces).
+Criar uma extensão é relativamente fácil. Inclui 3 partes, que vamos aprender nesta lição.
+Naturalmente, o serviço web deve ser hospedado, mas isso é abordado em outra lição. Para este exercício, usaremos um [Codespace](https://github.com/features/codespaces).
 
-1. **GitHub App** - Enables message handling and communicating with GitHub Copilot.
-1. **Extension Service** - A standard web service for receiving the messages, performing the custom actions, and responding back to GitHub Copilot.
-1. **Extension Content** - Materials provided to your extension to customize it for your application.
+1. **GitHub App** – Permite o tratamento de mensagens e a comunicação com o GitHub Copilot.
+1. **Serviço da Extensão** – Um serviço web padrão para receber as mensagens, executar as ações personalizadas e responder ao GitHub Copilot.
+1. **Conteúdo da Extensão** – Materiais fornecidos para sua extensão para personalizá-la para sua aplicação.
 
-> [!IMPORTANT]
-> A [GitHub Copilot Extension](https://github.com/features/copilot/extensions) is _NOT_ the [GitHub Copilot VS Code Extension](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) found in your IDE, but rather an extra capability to enhance it.
+> [!IMPORTANTE]
+> Uma [Extensão do GitHub Copilot](https://github.com/features/copilot/extensions) _NÃO_ é a [Extensão do GitHub Copilot para VS Code](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) encontrada no seu IDE, mas sim uma capacidade extra para aprimorá-lo.
 
 ```mermaid
 flowchart LR
 
-   %% User
-   user@{ shape: circle, label: "User" }
+   %% Usuário
+   user@{ shape: circle, label: "Usuário" }
    ide@{ shape: div-rect, label: "IDE
                                  (Copilot Chat)" }
 
-   %% Extension
+   %% Extensão
    github_app@{ shape: div-rect, label: "GitHub App" }
-   extension_content@{ shape: docs, label: "Extension Content"}
-   %% extension_calls@{ shape: docs, label: "Function Calls"}
-   %% extension_resource@{ shape: cyl, label: "Other
-   %%                                         Resources" }
-   extension_service@{ shape: subproc, label: "Extension Service" }
+   extension_content@{ shape: docs, label: "Conteúdo da Extensão"}
+   extension_service@{ shape: subproc, label: "Serviço da Extensão" }
 
    %% Copilot
-   copilot_service@{ shape: curv-trap, label: "Copilot
-   Services" }
+   copilot_service@{ shape: curv-trap, label: "Serviços do Copilot" }
 
-   %%% Main Flow
+   %%% Fluxo Principal
    user -- "**@my-ghc-extension**:
-            How do I...?" --> ide
-   --> github_app --> extension_service --response--> ide
+            Como eu...?" --> ide
+   --> github_app --> extension_service --resposta--> ide
 
-   %% Extension Flow
+   %% Fluxo da Extensão
    extension_service --> copilot_service --> extension_service
    extension_content o--o extension_service
-   %% extension_resource <--> extension_calls --> extension_service --> extension_calls
 ```
 
-### Ok, let's get to developing! :mechanical_arm:
+### Ok, vamos começar a desenvolver! :mechanical_arm:
 
-Before we get started on your extension, we have to configure our development environment.
-Fortunately, this has been bootstrapped for us with a pre-configured [Codespace](https://github.com/features/codespaces).
+Antes de começarmos sua extensão, precisamos configurar nosso ambiente de desenvolvimento.
+Felizmente, isso já foi preparado para nós com um [Codespace](https://github.com/features/codespaces) pré-configurado.
 
-This development environment includes:
+Este ambiente de desenvolvimento inclui:
 
-- The Node.js runtime.
-- A template GitHub Extension (javascript web app service).
-- [VS Code](https://code.visualstudio.com/) launch settings to start your extension in debug mode.
+- O runtime do Node.js.
+- Um template de Extensão do GitHub (aplicação web em JavaScript).
+- Configurações de inicialização do [VS Code](https://code.visualstudio.com/) para iniciar sua extensão em modo de depuração.
 
-### :keyboard: Activity: Getting to know your extension development environment
+### :keyboard: Atividade: Conhecendo seu ambiente de desenvolvimento de extensões
 
-1. Right-click the below button to open the **Create Codespace** page in a new tab.
+1. Clique com o botão direito no botão abaixo para abrir a página **Criar Codespace** em uma nova aba.
 
-   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
+   [![Abrir no GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
 
-   - The free tier of Codespaces that comes with all GitHub accounts is fine, assuming you still have minutes available.
-   - The default Codespace settings are fine.
-   - This repository will provide the additional settings and files for making your extension.
+   - O nível gratuito do Codespaces, disponível para todas as contas do GitHub, é suficiente, desde que você ainda tenha minutos disponíveis.
+   - As configurações padrão do Codespace são adequadas.
+   - Este repositório fornecerá as configurações e arquivos adicionais para criar sua extensão.
 
-1. Confirm the **Repository** field is your copy of the exercise, not the original, then click the green **Create Codespace** button.
+1. Confirme que o campo **Repositório** é a sua cópia do exercício, não o original, depois clique no botão verde **Create Codespace**.
 
-   - ✅ Your copy: `/{{full_repo_name}}`
+   - ✅ Sua cópia: `/{{full_repo_name}}`
    - ❌ Original: `/skills/your-first-extension-for-github-copilot`
 
-1. Wait a moment for Visual Studio Code to load.
+1. Aguarde um momento para o Visual Studio Code carregar.
 
-1. Before we continue let's take a moment to familiarize ourselves with the project folder.
+1. Antes de continuarmos, vamos nos familiarizar com a pasta do projeto.
 
-   - The left navigation bar is where you can access the file explorer, debugger, and search.
-   - The lower panel (Ctrl+J) shows the debugger output, allows running terminal commands, and allows configuring the web service ports.
-   - Our template extension is in the `ghc-extension-js` folder. More on that in the next steps!
-   - The `index.js` file is the entry point for the extension and hosts the web service for Copilot to interact with.
-   - The `package-lock.json` and `package.json` files define the extension's dependencies.
+   - A barra de navegação à esquerda é onde você pode acessar o explorador de arquivos, o depurador e a busca.
+   - O painel inferior (Ctrl+J) mostra a saída do depurador, permite executar comandos no terminal e configurar as portas do serviço web.
+   - Nossa extensão modelo está na pasta `ghc-extension-js`. Mais sobre isso nos próximos passos!
+   - O arquivo `index.js` é o ponto de entrada da extensão e hospeda o serviço web para o Copilot interagir.
+   - Os arquivos `package-lock.json` e `package.json` definem as dependências da extensão.
 
-1. Create a new branch named `my-ghc-extension`. Ensure it is checked out in VS Code and published to GitHub.
+1. Crie um novo branch chamado `my-ghc-extension`. Certifique-se de que ele está selecionado no VS Code e publicado no GitHub.
 
-   - Note: Creating this branch triggers the next step in your exercise.
+   - Nota: Criar esse branch aciona o próximo passo do seu exercício.
