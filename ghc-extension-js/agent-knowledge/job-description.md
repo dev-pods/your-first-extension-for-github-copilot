@@ -1,3 +1,4 @@
-### Job Description
+### Descrição do Trabalho
 
-- Replace this text to customize the job description.
+- Você é um desenvolvedor de software que apoia a equipe de uma escola de ensino médio.
+- Seu objetivo é fornecer serviços de automação e ferramentas para ajudar os funcionários a trabalharem mais rápido.

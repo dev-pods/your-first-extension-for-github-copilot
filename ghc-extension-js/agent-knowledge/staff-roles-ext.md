@@ -1,184 +1,184 @@
-# Staff Descriptions
+# Descrições da Equipe
 
-Below is a list of common roles and tasks they might need.
-If a user specifies their role, you can use this information to provide more targeted suggestions or offer ways to help them.
+Abaixo está uma lista de funções comuns e tarefas que podem precisar.
+Se um usuário especificar sua função, você pode usar essa informação para fornecer sugestões mais direcionadas ou oferecer maneiras de ajudá-lo.
 
-## School Administration
+## Administração Escolar
 
-### Principal
+### Diretor(a)
 
-- Strategic Planning
-  - School improvement plans
-  - Budget management
-  - Resource allocation
-  - Staff recruitment and development
-- Leadership Responsibilities
-  - Vision setting and culture building
-  - Policy implementation
-  - Community relations
-  - Crisis management
-  - Teacher evaluation
+- Planejamento Estratégico
+  - Planos de melhoria escolar
+  - Gestão orçamentária
+  - Alocação de recursos
+  - Recrutamento e desenvolvimento de equipe
+- Responsabilidades de Liderança
+  - Definição de visão e construção de cultura
+  - Implementação de políticas
+  - Relações com a comunidade
+  - Gestão de crises
+  - Avaliação de professores
 
-### Assistant Principal
+### Vice-diretor(a)
 
-- Operations Management
-  - Daily scheduling
-  - Discipline management
-  - Facility supervision
-  - Event coordination
-- Support Functions
-  - Teacher coaching
-  - Parent communication
-  - Student intervention
-  - Safety protocols
+- Gestão Operacional
+  - Agendamento diário
+  - Gestão disciplinar
+  - Supervisão de instalações
+  - Coordenação de eventos
+- Funções de Apoio
+  - Acompanhamento de professores
+  - Comunicação com pais
+  - Intervenção com alunos
+  - Protocolos de segurança
 
-## Instructional Staff
+## Equipe de Ensino
 
-### Classroom Teacher
+### Professor(a) de Sala de Aula
 
-- Instructional Planning
-  - Curriculum implementation
-  - Lesson design
-  - Assessment creation
-  - Differentiation strategies
-- Classroom Management
-  - Behavior systems
-  - Learning environment
-  - Student engagement
-  - Parent communication
+- Planejamento de Ensino
+  - Implementação do currículo
+  - Elaboração de aulas
+  - Criação de avaliações
+  - Estratégias de diferenciação
+- Gestão de Sala de Aula
+  - Sistemas de comportamento
+  - Ambiente de aprendizagem
+  - Engajamento dos alunos
+  - Comunicação com pais
 
-### Special Education Teacher
+### Professor(a) de Educação Especial
 
-- Student Support
-  - IEP development
-  - Modification planning
-  - Progress monitoring
-  - Collaborative teaching
-- Documentation
-  - Legal compliance
-  - Service records
-  - Accommodation tracking
-  - Assessment data
+- Apoio ao Aluno
+  - Desenvolvimento de PEI (Plano Educacional Individualizado)
+  - Planejamento de adaptações
+  - Monitoramento de progresso
+  - Ensino colaborativo
+- Documentação
+  - Conformidade legal
+  - Registros de atendimento
+  - Acompanhamento de adaptações
+  - Dados de avaliações
 
-### Educational Specialist
+### Especialista Educacional
 
-- Subject Expertise
-  - Content mastery
-  - Curriculum development
-  - Best practices research
-  - Teacher mentoring
-- Resource Management
-  - Materials selection
-  - Technology integration
-  - Professional development
-  - Department coordination
+- Especialização em Conteúdo
+  - Domínio do conteúdo
+  - Desenvolvimento curricular
+  - Pesquisa de melhores práticas
+  - Mentoria de professores
+- Gestão de Recursos
+  - Seleção de materiais
+  - Integração de tecnologia
+  - Desenvolvimento profissional
+  - Coordenação de departamento
 
-## Support Staff
+## Equipe de Apoio
 
-### School Counselor
+### Orientador(a) Escolar
 
-- Student Services
-  - Academic guidance
-  - Social-emotional support
-  - Career planning
-  - Crisis intervention
-- Program Management
-  - Testing coordination
-  - College readiness
-  - Schedule planning
-  - Student records
+- Serviços ao Aluno
+  - Orientação acadêmica
+  - Apoio socioemocional
+  - Planejamento de carreira
+  - Intervenção em crises
+- Gestão de Programas
+  - Coordenação de testes
+  - Preparação para a faculdade
+  - Planejamento de horários
+  - Registros de alunos
 
-### School Psychologist
+### Psicólogo(a) Escolar
 
-- Assessment
-  - Psychological evaluation
-  - Learning diagnostics
-  - Behavioral analysis
-  - Intervention planning
-- Support Services
-  - Student counseling
-  - Staff consultation
-  - Parent education
-  - Crisis response
+- Avaliação
+  - Avaliação psicológica
+  - Diagnóstico de aprendizagem
+  - Análise comportamental
+  - Planejamento de intervenções
+- Serviços de Apoio
+  - Aconselhamento de alunos
+  - Consultoria para equipe
+  - Orientação a pais
+  - Resposta a crises
 
-### Instructional Coach
+### Coordenador(a) Pedagógico(a)
 
-- Teacher Support
-  - Classroom observation
-  - Feedback provision
-  - Strategy modeling
-  - Resource sharing
-- Professional Development
-  - Workshop facilitation
-  - PLC leadership
-  - Data analysis
-  - Best practice research
+- Apoio ao Professor
+  - Observação de aulas
+  - Fornecimento de feedback
+  - Modelagem de estratégias
+  - Compartilhamento de recursos
+- Desenvolvimento Profissional
+  - Facilitação de oficinas
+  - Liderança de grupos de estudo (PLC)
+  - Análise de dados
+  - Pesquisa de melhores práticas
 
-## Specialized Roles
+## Funções Especializadas
 
-### Technology Coordinator
+### Coordenador(a) de Tecnologia
 
-- System Management
-  - Infrastructure planning
-  - Software deployment
-  - Device management
-  - Security protocols
-- Integration Support
-  - Teacher training
-  - Digital resources
-  - Troubleshooting
-  - Innovation planning
+- Gestão de Sistemas
+  - Planejamento de infraestrutura
+  - Implantação de softwares
+  - Gerenciamento de dispositivos
+  - Protocolos de segurança
+- Apoio à Integração
+  - Treinamento de professores
+  - Recursos digitais
+  - Suporte técnico
+  - Planejamento de inovação
 
-### Media Specialist/Librarian
+### Bibliotecário(a)/Especialista em Mídia
 
-- Resource Management
-  - Collection development
-  - Digital resources
-  - Research guidance
-  - Information literacy
-- Program Implementation
-  - Reading programs
-  - Technology integration
-  - Collaboration support
-  - Student engagement
+- Gestão de Recursos
+  - Desenvolvimento de acervo
+  - Recursos digitais
+  - Orientação em pesquisa
+  - Alfabetização informacional
+- Implementação de Programas
+  - Programas de leitura
+  - Integração de tecnologia
+  - Apoio à colaboração
+  - Engajamento dos alunos
 
-### Parent Coordinator
+### Coordenador(a) de Pais
 
-- Community Engagement
-  - Family outreach
-  - Event planning
-  - Resource connection
-  - Communication facilitation
-- Support Services
-  - Translation services
-  - Parent education
-  - Volunteer coordination
-  - Community partnerships
+- Engajamento Comunitário
+  - Contato com famílias
+  - Planejamento de eventos
+  - Conexão com recursos
+  - Facilitação da comunicação
+- Serviços de Apoio
+  - Serviços de tradução
+  - Educação de pais
+  - Coordenação de voluntários
+  - Parcerias comunitárias
 
-## Administrative Support
+## Apoio Administrativo
 
-### Registrar
+### Secretário(a) Escolar
 
-- Records Management
-  - Enrollment processing
-  - Transcript maintenance
-  - Data verification
-  - Compliance monitoring
-- Administrative Support
-  - Schedule management
-  - Report generation
-  - Records requests
-  - Database maintenance
+- Gestão de Registros
+  - Processamento de matrículas
+  - Manutenção de históricos
+  - Verificação de dados
+  - Monitoramento de conformidade
+- Apoio Administrativo
+  - Gestão de agendas
+  - Geração de relatórios
+  - Solicitação de registros
+  - Manutenção de banco de dados
 
-### Administrative Assistant
+### Assistente Administrativo(a)
 
-- Office Management
-  - Daily operations
-  - Visitor processing
-  - Supply management
-  - Calendar coordination
-- Communication Support
-  - Phone system
-  - Mail distribution
-  - Message relay
-  - Document preparation
+- Gestão do Escritório
+  - Operações diárias
+  - Atendimento a visitantes
+  - Gestão de suprimentos
+  - Coordenação de calendários
+- Apoio à Comunicação
+  - Sistema telefônico
+  - Distribuição de correspondências
+  - Repasse de mensagens
+  - Preparação de documentos
