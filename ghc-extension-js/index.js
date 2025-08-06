@@ -5,36 +5,36 @@ import { dirname } from "path";
 import path from "path";
 import { promises as fs } from "node:fs";
 
-// Get current directory to help with loading files
+// Obter o diretório atual para ajudar a carregar arquivos
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Create a web service that listens for incoming requests
+// Cria um serviço web que escuta requisições recebidas
 const app = express();
 
-// Provide a basic website if the user visits the extension's URL
+// Fornece um site básico se o usuário visitar a URL da extensão
 app.get("/", (req, res) => {
-  console.log("Endpoint called: /");
+  console.log("Endpoint chamado: /");
   res.sendFile(__dirname + "/info.html");
 });
 app.get("/info", (req, res) => {
-  console.log("Endpoint called: /info");
+  console.log("Endpoint chamado: /info");
   res.sendFile(__dirname + "/info.html");
 });
 
-// After installing the app, GitHub will redirect the user to this URL
+// Após instalar o app, o GitHub irá redirecionar o usuário para esta URL
 app.get("/callback", (req, res) => {
-  console.log("Endpoint called: /callback");
-  res.send("Success! You may close this window and return to GitHub.");
+  console.log("Endpoint chamado: /callback");
+  res.send("Sucesso! Você pode fechar esta janela e retornar ao GitHub.");
 });
 
-// Receive chat requests, process, and return a response
+// Recebe requisições de chat, processa e retorna uma resposta
 app.post("/copilot", express.json(), async (req, res) => {
-  // Load messages array from the request payload
+  // Carrega o array de mensagens do payload da requisição
   const payload = req.body;
   const messages = payload.messages;
 
-  // Add the agent job description to copilot's messages
+  // Adiciona a descrição do trabalho do agente às mensagens do copilot
   // const jobDescription = await fs.readFile(
   //   path.join(__dirname, "agent-knowledge", "job-description.md"),
   //   "utf8"
@@ -44,7 +44,7 @@ app.post("/copilot", express.json(), async (req, res) => {
   //   content: jobDescription,
   // });
 
-  // Add the school overview to copilot's messages
+  // Adiciona a visão geral da escola às mensagens do copilot
   // const schoolOverview = await fs.readFile(
   //   path.join(__dirname, "agent-knowledge", "school-overview.md"),
   //   "utf8"
@@ -54,7 +54,7 @@ app.post("/copilot", express.json(), async (req, res) => {
   //   content: schoolOverview,
   // });
 
-  // Add the staff descriptions to copilot's messages
+  // Adiciona as descrições da equipe às mensagens do copilot
   // const staffDescriptions = await fs.readFile(
   //   path.join(__dirname, "agent-knowledge", "staff-roles.md"),
   //   "utf8"
@@ -64,7 +64,7 @@ app.post("/copilot", express.json(), async (req, res) => {
   //   content: staffDescriptions,
   // });
 
-  // Send messages array to copilot and collect the response
+  // Envia o array de mensagens para o copilot e coleta a resposta
   const userToken = req.get("X-GitHub-Token");
   const copilotResponse = await fetch("https://api.githubcopilot.com/chat/completions", {
     method: "POST",
@@ -78,16 +78,16 @@ app.post("/copilot", express.json(), async (req, res) => {
     }),
   });
 
-  // Forward the response stream back to the user
+  // Encaminha o stream de resposta de volta para o usuário
   Readable.from(copilotResponse.body).pipe(res);
 });
 
-// Start the extension web service and show the URL where the web service is running.
+// Inicia o serviço web da extensão e mostra a URL onde o serviço está rodando.
 const port = Number(process.env.PORT || "3000");
 app.listen(port, () => {
   const codespaceName = process.env.CODESPACE_NAME;
   const url = codespaceName
     ? `https://${codespaceName}-${port}.app.github.dev`
     : `http://localhost:${port}`;
-  console.log(`Copilot extension service running at: ${url}`);
+  console.log(`Serviço da extensão Copilot rodando em: ${url}`);
 });
