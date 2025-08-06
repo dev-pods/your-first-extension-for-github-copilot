@@ -18,7 +18,7 @@ jobs:
     if: |
       !github.event.repository.is_template
     name: Iniciar Exercício
-    uses: skills/exercise-toolkit/.github/workflows/start-exercise.yml@v0.7.0
+    uses: dev-pods/exercise-toolkit/.github/workflows/start-exercise.yml@v0.1.1
     with:
       exercise-title: "Sua Primeira Extensão para o GitHub Copilot"
       intro-message: "Prepare-se! Vamos aprender como tornar seu programador parceiro de IA favorito ainda melhor, estendendo-o com algumas habilidades personalizadas!"
@@ -38,9 +38,9 @@ jobs:
       - name: Obter templates de resposta
         uses: actions/checkout@v4
         with:
-          repository: skills/exercise-toolkit
+          repository: dev-pods/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.7.0
+          ref: v0.1.1
 
       - name: Criar comentário - adicionar conteúdo do passo
         uses: GrantBirki/comment@v2.1.1

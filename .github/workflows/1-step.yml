@@ -17,7 +17,7 @@ env:
 jobs:
   find_exercise:
     name: Encontrar issue do exercício
-    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.7.0
+    uses: dev-pods/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.1.1
 
   post_next_step_content:
     name: Publicar conteúdo do próximo passo
@@ -34,9 +34,9 @@ jobs:
       - name: Obter templates de resposta
         uses: actions/checkout@v4
         with:
-          repository: skills/exercise-toolkit
+          repository: dev-pods/exercise-toolkit
           path: exercise-toolkit
-          ref: v0.7.0
+          ref: v0.1.1
 
       - name: Criar comentário - etapa finalizada
         uses: GrantBirki/comment@v2.1.1

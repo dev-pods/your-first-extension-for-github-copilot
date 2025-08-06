@@ -61,7 +61,6 @@ jobs:
   finish_exercise:
     name: Finalizar Exercício
     needs: [find_exercise, post_review_content]
-    uses: skills/exercise-toolkit/.github/workflows/finish-exercise.yml@v0.7.0
+    uses: dev-pods/exercise-toolkit/.github/workflows/finish-exercise.yml@v0.1.1
     with:
       issue-url: ${{ needs.find_exercise.outputs.issue-url }}
-      exercise-title: "Sua primeira extensão para o GitHub Copilot"
