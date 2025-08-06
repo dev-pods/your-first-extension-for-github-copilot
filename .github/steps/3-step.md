@@ -1,72 +1,72 @@
-## Step 3: Connecting to GitHub
+## Passo 3: Conectando ao GitHub
 
-A critical component for using our extension is creating a [GitHub App](https://docs.github.com/en/apps/overview), which handles presenting our extension to the user and providing authorization to resources. In fact, GitHub Apps can be used for many things such as managing issues, commenting on pull requests, and even talking to other services like Slack.
+Um componente fundamental para usar nossa extensão é criar um [GitHub App](https://docs.github.com/pt/apps/overview), que será responsável por apresentar nossa extensão ao usuário e fornecer autorização para recursos. Na verdade, GitHub Apps podem ser usados para muitas coisas, como gerenciar issues, comentar em pull requests e até mesmo se comunicar com outros serviços como o Slack.
 
-For our extension, it will be similar to talking to another service, and displaying it in a general purpose chat on github.com and in Copilot Chat for Visual Studio Code.
+Para nossa extensão, será semelhante a conversar com outro serviço, exibindo-o em um chat de uso geral no github.com e no Copilot Chat do Visual Studio Code.
 
-> [!TIP]
-> If you would like to learn more about these and other capabilities, check out the [GitHub Apps Overview](https://docs.github.com/en/apps/overview) page.
+> [!DICA]
+> Se quiser saber mais sobre essas e outras capacidades, confira a página [Visão geral dos GitHub Apps](https://docs.github.com/pt/apps/overview).
 
-### :keyboard: Activity: Connecting to GitHub
+### :keyboard: Atividade: Conectando ao GitHub
 
-Let's make a GitHub App, configure it to work with GitHub Copilot as an Agent, and install it on your account.
+Vamos criar um GitHub App, configurá-lo para funcionar com o GitHub Copilot como um Agente e instalá-lo na sua conta.
 
-1. Navigate to GitHub.com
-1. In the top right, click your profile picture, then click **Settings**.
-1. In the left sidebar at the bottom, select **Developer settings**.
-1. In the left sidebar at the top, select **GitHub Apps** .
-1. Click the **New GitHub App** button.
-1. In the displayed form, enter the following:
-   1. In the **Register new GitHub App** section, enter:
-      - **GitHub App name**: `my-ghc-extension-{{login}}`
-        - The app name must be unique across all GitHub.
-        - Note: The handle in Copilot Chat will be lowercase, like `@my-ghc-extension-{{login | lower}}`.
-      - **Description**: `My first extension for GitHub Copilot`
-      - **Homepage URL**: Any url that provides an overview and usage instructions for your extension.
-        - We will use our web service's information page. This is the url displayed on console when you run the extension, plus `/info`.
-        - Example: `https://conscious-jumper-abcdefg-3000.app.github.dev/info`
-   1. In the **Identifying and authorizing users** section, enter:
-      - **Callback URL**: The url displayed on console when you run the extension, plus `/callback`.
-        - Example: `https://conscious-jumper-abcdefg-3000.app.github.dev/callback`
-      - **Expire user authorization tokens**: `[x] Checked`
-      - **Request user authorization (OAuth) during installation**: `[x] Checked`
-      - **Enable Device Flow**: `[ ] Unchecked`
-   1. In the **Webhook** section enter:
-      - **Active**: `[ ] Unchecked`
-   1. In the **Permissions** section, select the following permissions:
-      - Repository: `None`
-      - Organization: `None`
-      - Account:
-        - **Copilot Chat**: `read only`
-   1. In the **Where can this GitHub App be installed?** section, select:
-      - `Only on this account`
-1. Click **Create GitHub App**.
-1. On the left sidebar, click **Copilot**.
-   - If this is your first time creating a Copilot extension, you will be prompted to accept the terms.
-1. In the **App Type** dropdown, select `Agent`. Enter the following details:
-   - **Preauthorization URL**: Blank
-   - **Agent Definition > URL**: The url displayed on the console when you run the extension, plus `/copilot`.
-     - Example: `https://conscious-jumper-abcdefg-3000.app.github.dev/copilot`
-   - **Inference Description**: `My first extension for GitHub Copilot`
-     - This will be displayed as a tooltip in the Copilot chat interface.
-1. click **Save**.
-1. On the left sidebar, click **Install App**.
-1. Click **Install** and **Install & Authorize**.
+1. Acesse o GitHub.com
+1. No canto superior direito, clique na sua foto de perfil e depois em **Configurações**.
+1. Na barra lateral esquerda, na parte inferior, selecione **Configurações do desenvolvedor**.
+1. Na barra lateral esquerda, na parte superior, selecione **GitHub Apps**.
+1. Clique no botão **Novo GitHub App**.
+1. No formulário exibido, preencha o seguinte:
+   1. Na seção **Registrar novo GitHub App**, preencha:
+      - **Nome do GitHub App**: `my-ghc-extension-{{login}}`
+        - O nome do app deve ser único em todo o GitHub.
+        - Nota: O identificador no Copilot Chat será em minúsculas, como `@my-ghc-extension-{{login | lower}}`.
+      - **Descrição**: `Minha primeira extensão para o GitHub Copilot`
+      - **URL da página inicial**: Qualquer URL que forneça uma visão geral e instruções de uso para sua extensão.
+        - Usaremos a página de informações do nosso serviço web. Este é o URL exibido no console ao rodar a extensão, mais `/info`.
+        - Exemplo: `https://conscious-jumper-abcdefg-3000.app.github.dev/info`
+   1. Na seção **Identificando e autorizando usuários**, preencha:
+      - **URL de callback**: O URL exibido no console ao rodar a extensão, mais `/callback`.
+        - Exemplo: `https://conscious-jumper-abcdefg-3000.app.github.dev/callback`
+      - **Expirar tokens de autorização do usuário**: `[x] Marcado`
+      - **Solicitar autorização do usuário (OAuth) durante a instalação**: `[x] Marcado`
+      - **Habilitar Device Flow**: `[ ] Desmarcado`
+   1. Na seção **Webhook**, preencha:
+      - **Ativo**: `[ ] Desmarcado`
+   1. Na seção **Permissões**, selecione as seguintes permissões:
+      - Repositório: `Nenhuma`
+      - Organização: `Nenhuma`
+      - Conta:
+        - **Copilot Chat**: `somente leitura`
+   1. Na seção **Onde este GitHub App pode ser instalado?**, selecione:
+      - `Apenas nesta conta`
+1. Clique em **Criar GitHub App**.
+1. Na barra lateral esquerda, clique em **Copilot**.
+   - Se for a primeira vez criando uma extensão Copilot, será solicitado que aceite os termos.
+1. No menu suspenso **Tipo de App**, selecione `Agente`. Preencha os seguintes detalhes:
+   - **URL de pré-autorização**: Deixe em branco
+   - **Definição do Agente > URL**: O URL exibido no console ao rodar a extensão, mais `/copilot`.
+     - Exemplo: `https://conscious-jumper-abcdefg-3000.app.github.dev/copilot`
+   - **Descrição da Inferência**: `Minha primeira extensão para o GitHub Copilot`
+     - Isso será exibido como uma dica de ferramenta na interface do chat do Copilot.
+1. Clique em **Salvar**.
+1. Na barra lateral esquerda, clique em **Instalar App**.
+1. Clique em **Instalar** e depois em **Instalar e Autorizar**.
 
-### :keyboard: Activity: Testing the connection
+### :keyboard: Atividade: Testando a conexão
 
-Let's check if our extension service is available to use on github.com and in our IDE, and that they are able to communicate.
+Vamos verificar se nosso serviço de extensão está disponível para uso no github.com e no nosso IDE, e se eles conseguem se comunicar.
 
-1. In VS Code, use the debugger to start the extension service if it is not already running.
-1. Open a web browser and navigate to [github.com](https://github.com).
-1. At the top of the page, click the **Copilot Icon**.
-1. Start a general purpose chat.
-1. Type `@my-ghc-extension-{{login | lower}} How can you help me?` and press enter. You should get a response.
-   > **Tip:** Try opening another VS Code window. You can use the extension there with Copilot Chat as well!
-1. After you are done configuring your **GitHub App** and testing the connection, leave the following comment on the issue to let Mona know you are ready for the next step.
+1. No VS Code, use o depurador para iniciar o serviço da extensão, caso ainda não esteja rodando.
+1. Abra um navegador e acesse [github.com](https://github.com).
+1. No topo da página, clique no **Ícone do Copilot**.
+1. Inicie um chat de uso geral.
+1. Digite `@my-ghc-extension-{{login | lower}} Como você pode me ajudar?` e pressione enter. Você deve receber uma resposta.
+   > **Dica:** Tente abrir outra janela do VS Code. Você pode usar a extensão lá também com o Copilot Chat!
+1. Depois de terminar de configurar seu **GitHub App** e testar a conexão, deixe o seguinte comentário na issue para avisar a Mona que você está pronto para o próximo passo.
 
    ```markdown
-   Hey @professortocat, I'm all done configuring my GitHub App. Here's the link. What's next?
+   Olá @professortocat, terminei de configurar meu GitHub App. Aqui está o link. O que vem agora?
 
    https://github.com/apps/my-ghc-extension-{{login}}
    ```

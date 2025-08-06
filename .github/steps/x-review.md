@@ -1,24 +1,24 @@
-## Review
+## Revisão
 
-_Congratulations, you've completed this exercise and made your first GitHub Copilot Extension!_
+_Parabéns, você concluiu este exercício e criou sua primeira Extensão do GitHub Copilot!_
 
 <img src="https://octodex.github.com/images/cherryontop-o-cat.png" alt=celebrate width=200 align=right>
 
-Here's a recap of your accomplishments:
+Aqui está um resumo das suas conquistas:
 
-- You prepared your development environment to make a GitHub Copilot Extension.
-- You created a new GitHub Copilot Extension using a template.
-- You connected your extension to GitHub.
-- You customized your extension to help a high school staff become developers with natural language.
+- Você preparou seu ambiente de desenvolvimento para criar uma Extensão do GitHub Copilot.
+- Você criou uma nova Extensão do GitHub Copilot usando um template.
+- Você conectou sua extensão ao GitHub.
+- Você personalizou sua extensão para ajudar a equipe de uma escola de ensino médio a se tornar desenvolvedora usando linguagem natural.
 
-### What's next?
+### O que vem a seguir?
 
-- Use GitHub Actions to automate [deploying your service to Azure](https://github.com/skills/deploy-to-azure).
-- Publish your extension to the [GitHub Marketplace](https://docs.github.com/en/copilot/building-copilot-extensions/about-building-copilot-extensions#about-visibility-of-github-copilot-extensions).
-- Check out the other [GitHub Skills exercises](https://learn.github.com/skills).
+- Use o GitHub Actions para automatizar a [publicação do seu serviço na Azure](https://github.com/skills/deploy-to-azure).
+- Publique sua extensão no [GitHub Marketplace](https://docs.github.com/pt/copilot/building-copilot-extensions/about-building-copilot-extensions#about-visibility-of-github-copilot-extensions).
+- Confira outros [exercícios do GitHub Skills](https://learn.github.com/skills).
 
-Check out these resources to learn more about GitHub Copilot Extensions:
+Veja estes recursos para saber mais sobre Extensões do GitHub Copilot:
 
-- View the GitHub docs for this exercise: [Creating a Copilot Extension](https://docs.github.com/en/copilot/building-copilot-extensions/creating-a-copilot-extension)
-- Need something simpler? Try creating a [Copilot SkillSet](https://docs.github.com/en/copilot/building-copilot-extensions/building-a-copilot-skillset-for-your-copilot-extension/building-copilot-skillsets).
-- Are you a student? Check out the [Student Developer Pack](https://education.github.com/pack).
+- Veja a documentação do GitHub para este exercício: [Criando uma Extensão do Copilot](https://docs.github.com/pt/copilot/building-copilot-extensions/creating-a-copilot-extension)
+- Precisa de algo mais simples? Experimente criar um [SkillSet do Copilot](https://docs.github.com/pt/copilot/building-copilot-extensions/building-a-copilot-skillset-for-your-copilot-extension/building-copilot-skillsets).
+- Você é estudante? Confira o [Student Developer Pack](https://education.github.com/pack).

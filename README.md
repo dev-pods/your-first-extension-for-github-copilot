@@ -1,50 +1,50 @@
-# Your first extension for GitHub Copilot
+# Sua primeira extensão para o GitHub Copilot
 
-_Customize GitHub Copilot to your personal or company needs in less than an hour._
+_Personalize o GitHub Copilot para suas necessidades pessoais ou da sua empresa em menos de uma hora._
 
-## Welcome
+## Boas-vindas
 
-People love how GitHub Copilot helps them write code faster and with fewer errors.
-But what if it already knew some context about your job, team, or company?
-In this exercise, we will make a custom extension for GitHub Copilot that can help you with that.
+As pessoas adoram como o GitHub Copilot as ajuda a escrever código mais rápido e com menos erros.
+Mas e se ele já soubesse algum contexto sobre seu trabalho, equipe ou empresa?
+Neste exercício, vamos criar uma extensão personalizada para o GitHub Copilot que pode te ajudar com isso.
 
-- **Who is this for**: Intermediate developers familiar with GitHub Copilot, basic GitHub, and basic web development
-- **What you'll learn**: We'll introduce GitHub Copilot Extensions and how to customize them.
-- **What you'll build**: You'll load an existing template extension and then modify it to support the staff of a high school.
-- **Prerequisites**: Skills Exercise: Getting Started with GitHub Copilot
-- **How long**: This course takes less than one hour to complete.
+- **Para quem é**: Desenvolvedores intermediários familiarizados com o GitHub Copilot, GitHub básico e desenvolvimento web básico
+- **O que você vai aprender**: Vamos apresentar as Extensões do GitHub Copilot e como personalizá-las.
+- **O que você vai construir**: Você vai carregar uma extensão modelo existente e depois modificá-la para dar suporte à equipe de uma escola de ensino médio.
+- **Pré-requisitos**: Exercício de habilidades: Introdução ao GitHub Copilot
+- **Duração**: Este curso leva menos de uma hora para ser concluído.
 
-In this exercise, you will:
+Neste exercício, você irá:
 
-1. Start up a preconfigured development environment for making a GitHub Copilot Extension.
-2. Run the included template extension.
-3. Connect the extension to your GitHub account.
-4. Customize the extension to your needs.
-5. Practice prompting with your new custom Github Copilot Extension.
+1. Iniciar um ambiente de desenvolvimento pré-configurado para criar uma Extensão do GitHub Copilot.
+2. Executar a extensão modelo incluída.
+3. Conectar a extensão à sua conta do GitHub.
+4. Personalizar a extensão conforme suas necessidades.
+5. Praticar prompts com sua nova Extensão personalizada do GitHub Copilot.
 
-### How to start this exercise
+### Como começar este exercício
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+Basta copiar o exercício para sua conta, depois dê à sua Octocat favorita (Mona) **cerca de 20 segundos** para preparar a primeira lição e então **atualize a página**.
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills-dev&template_name=your-first-extension-for-github-copilot&owner=%40me&name=skills-your-first-extension-for-github-copilot&description=Exercise:+My+Copilot+Extension&visibility=public)
+[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=dev-pods&template_name=your-first-extension-for-github-copilot&owner=%40me&name=skills-your-first-extension-for-github-copilot&visibility=public)
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>Está com problemas? 🤷</summary><br/>
 
-When copying the exercise, we recommend the following settings:
+Ao copiar o exercício, recomendamos as seguintes configurações:
 
-- For owner, choose your personal account or an organization to host the repository.
+- Para proprietário, escolha sua conta pessoal ou uma organização para hospedar o repositório.
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+- Recomendamos criar um repositório público, pois repositórios privados usam minutos do Actions.
 
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
+Se o exercício não estiver pronto em 20 segundos, verifique a aba [Actions](../../actions).
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
+- Veja se há um job em execução. Às vezes, pode demorar um pouco mais.
 
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+- Se a página mostrar um job com falha, por favor, envie uma issue. Parabéns, você encontrou um bug! 🐛
 
 </details>
 
 ---
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2025 GitHub &bull; [Código de Conduta](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [Licença MIT](https://gh.io/mit)
