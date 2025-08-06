@@ -1,4 +1,4 @@
-name: Etapa 3 # Conectando ao GitHub
+name: Step 3
 
 on:
   issue_comment:
